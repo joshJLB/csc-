@@ -1,0 +1,103 @@
+// Arrow
+.arrow-div
+  width 0
+  height 0
+  border-style solid
+  border-width 0rem 1rem 1rem
+  border-color transparent
+  position absolute
+  bottom 0rem
+  left 50%
+  transform translateX(-50%)
+
+.white-bottom
+  border-bottom-color white
+.grey-bottom
+  border-bottom-color primaryColor
+
+// Tabs
+.tab-container
+  ul
+    padding-bottom .3rem
+    border-bottom 0
+    +below(768px)
+      display flex
+      flex-wrap wrap
+    li
+      width 33.33%
+      height 5rem
+      padding .3rem
+      border-radius 0
+      text-align center
+      +below(768px)
+        width 100%
+      a.nav-link
+        background-color thirdColor
+        border-radius 0
+        border 0
+        position relative
+        width 100%
+        color white
+        height 100%
+        display flex
+        justify-content center
+        align-items center
+        font-family secondaryFont
+        font-size 1.4rem
+        transition .5s
+        .white-bottom
+          z-index 9
+        .grey-bottom
+          z-index 10
+          bottom -.6rem
+          +below(768px)
+            display none
+        .arrow-div
+          opacity 0
+      a.nav-link.active, a.hover
+        background-color secondaryColor
+        color white
+        border-radius 0
+        border 0
+        .arrow-div
+          opacity 1
+
+  .tab-content
+    background-color primaryColor
+    margin 0 .3rem .3rem .3rem
+    border-top 0
+    .tab-pane
+      .content-holder
+        padding 3rem 1rem 2rem
+        color white
+        max-width 55rem
+        margin: 0 auto;
+        text-align center
+        p:last-child
+          margin-bottom 0
+      a.link-bottom p
+        width 100%
+        background-color white
+        color primaryColor
+        text-align center
+        padding .7rem 1rem
+        text-transform: uppercase;
+        transition .5s
+        background-color #f3f3f3
+        border-bottom .3rem solid #f3f3f3
+        border-top .3rem solid #f3f3f3
+        position relative
+      a.link-bottom p:after
+          content ""
+          width 0%
+          height .3rem
+          background-color secondaryColor
+          position absolute
+          bottom -.3rem
+          left 50%
+          transform translateX(-50%)
+          transition .5s
+      a.link-bottom p:hover
+        color secondaryColor
+      a.link-bottom p:hover:after
+        width 100%

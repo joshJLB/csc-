@@ -1,0 +1,73 @@
+version: '3'
+services:
+
+  csc:
+    #image: collinjlb/jlb-wordpress:php7.1-apache
+    container_name: csc
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./themes:/var/www/html/wp-content/themes
+      - ./plugins:/var/www/html/wp-content/plugins
+      - ./uploads:/var/www/html/wp-content/uploads
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_PASSWORD: dev
+      WORDPRESS_DB_NAME: csc
+    ports:
+      - 80:80
+      - 443:443
+      - 3000:3000
+      - 3001:3001
+    networks:
+      - jlb_backend
+
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    volumes:
+      - jlb_dev__mysql_data:/var/lib/mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: dev
+    restart: always
+    networks:
+      - jlb_backend
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    depends_on:
+      - mysql
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: dev
+    restart: always
+    networks:
+      - jlb_backend
+
+  backup:
+    image: jswetzen/mysql-backup
+    container_name: backup
+    depends_on:
+      - mysql
+    volumes:
+        - ./mysql-backup:/backup
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASS: dev
+      CRON_TIME: '0 * * * *'
+      MAX_BACKUPS: 10
+      INIT_BACKUP: 'true'
+    restart: always
+    networks:
+      - jlb_backend
+
+networks:
+  jlb_backend:
+volumes:
+  jlb_dev__mysql_data:

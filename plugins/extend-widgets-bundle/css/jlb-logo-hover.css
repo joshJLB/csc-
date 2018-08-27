@@ -1,0 +1,76 @@
+.logo-hover-container {
+  max-width: 70rem;
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.logo-hover-container .logo-holder {
+  padding: 0.5rem 1rem;
+  width: 15rem;
+  height: 8rem;
+  position: relative;
+}
+.logo-hover-container .logo-holder .logo-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.logo-hover-container .logo-holder .text-holder,
+.logo-hover-container .logo-holder .image-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.logo-hover-container .logo-holder .image-holder {
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-position: center;
+  opacity: 1;
+}
+.logo-hover-container .logo-holder .text-holder {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+}
+.logo-hover-container .logo-holder .text-holder a h5 {
+  color: #fff;
+  margin: 0;
+}
+.logo-hover-container .logo-holder:hover .logo-inner .image-holder {
+  opacity: 0;
+}
+.logo-hover-container .logo-holder:hover .logo-inner .text-holder {
+  opacity: 1;
+}

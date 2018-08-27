@@ -1,0 +1,6 @@
+.DS_store
+
+# Don't watch docker related files
+.bashrc
+plugin-keys.txt
+themes/twenty*/

@@ -1,0 +1,44 @@
+// Cards
+.card-container
+  max-width 72rem
+  width 100%
+  display flex
+  margin 0 auto
+  justify-content center
+  flex-wrap wrap
+  +below(1200px)
+    max-width 70rem
+  .card-holder
+    width 33.33%
+    padding .5rem 2rem
+    +below(1200px)
+      padding .5rem 1rem
+    +below(800px)
+      width 100%
+      max-width 30rem
+
+    .card-inner
+      background-color white
+      box-shadow 0 0 15px -5px rgba(0,0,0,1)
+      .image-holder
+        height 10rem
+        background-size cover
+        background-position center
+      .text-holder
+        padding 1rem
+        text-align center
+        p
+          font-size .9rem
+        button
+          width 100%
+          border .1rem solid thirdColor
+          background-color transparent
+          padding .3rem .5rem
+          text-transform uppercase
+          font-family primaryFont
+          color thirdColor
+          cursor pointer
+          transition .5s
+        button:hover
+          color white
+          background-color thirdColor

@@ -1,0 +1,47 @@
+//Logo Hover
+.logo-hover-container
+  max-width 70rem
+  margin 0 auto
+  width 100%
+  display flex
+  flex-wrap wrap
+  align-items center
+  justify-content center
+  .logo-holder
+    padding .5rem 1rem
+    width  15rem
+    height 8rem
+    position relative
+    .logo-inner
+      width 100%
+      height 100%
+      position relative
+    .text-holder, .image-holder
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      transition .5s
+    .image-holder
+      background-repeat no-repeat
+      background-size contain
+      background-position center
+      opacity 1
+    .text-holder
+      display flex
+      align-items center
+      justify-content center
+      text-align center
+      color white
+      opacity 0
+      a
+        h5
+          color white
+          margin 0
+  .logo-holder:hover
+    .logo-inner
+      .image-holder
+        opacity 0
+      .text-holder
+        opacity 1

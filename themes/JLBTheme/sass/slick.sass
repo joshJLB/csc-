@@ -1,0 +1,34 @@
+@import 'variables'
+
+// Slick Styling
+#home
+  .hero-slider
+    height: 100%
+    width: 100%
+  .slick-list, .slick-track
+    height: 100%
+    .hero-slide
+      +bg(cover, center)
+
+.slick-dots
+  position: absolute
+  z-index: 3
+  +fb(center, center)
+  bottom: 1rem
+  left: 50%
+  transform: translateX(-50%)
+  width: auto
+  list-style: none
+  li
+    +fb(center, center)
+  button
+    padding: 0.25rem
+    margin: 0 1rem
+    background-color: transparentize(white, 0.5)
+    color: transparent
+    border: none
+    &:focus
+      outline: none
+  .slick-active
+    button
+      background-color: white

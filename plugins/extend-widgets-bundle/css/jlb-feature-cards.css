@@ -1,0 +1,71 @@
+.card-container {
+  max-width: 72rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+@media only screen and (max-width: 1200px) {
+  .card-container {
+    max-width: 70rem;
+  }
+}
+.card-container .card-holder {
+  width: 33.33%;
+  padding: 0.5rem 2rem;
+}
+@media only screen and (max-width: 1200px) {
+  .card-container .card-holder {
+    padding: 0.5rem 1rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .card-container .card-holder {
+    width: 100%;
+    max-width: 30rem;
+  }
+}
+.card-container .card-holder .card-inner {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 15px -5px #000;
+          box-shadow: 0 0 15px -5px #000;
+}
+.card-container .card-holder .card-inner .image-holder {
+  height: 10rem;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+}
+.card-container .card-holder .card-inner .text-holder {
+  padding: 1rem;
+  text-align: center;
+}
+.card-container .card-holder .card-inner .text-holder p {
+  font-size: 0.9rem;
+}
+.card-container .card-holder .card-inner .text-holder button {
+  width: 100%;
+  border: 0.1rem solid #15365e;
+  background-color: transparent;
+  padding: 0.3rem 0.5rem;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  color: #15365e;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.card-container .card-holder .card-inner .text-holder button:hover {
+  color: #fff;
+  background-color: #15365e;
+}

@@ -6,6 +6,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo home_url(); ?>">
     <link rel="apple-touch-icon" href="<?php echo home_url(); ?>"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500" rel="stylesheet">
     <script defer src="https://pro.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-d84LGg2pm9KhR4mCAs3N29GQ4OYNy+K+FBHX8WhimHpPm86c839++MDABegrZ3gn" crossorigin="anonymous"></script>
     <?php wp_head(); ?>
   </head>
@@ -19,7 +20,7 @@
         </div> <!-- Header Content & Logo -->
         <nav class="header-nav">
           <?php wp_nav_menu( array( 'menu' => 'Header Menu' ) ); ?>
-          <button type="button" name="search"><a href="<?php echo home_url(); ?>"><i class="fas fa-search"></i></a></button>
+          <!-- <button type="button" name="search"><a href="<?php echo home_url(); ?>"><i class="fas fa-search"></i></a></button> -->
         </nav> <!-- Header Navigation -->
 
         <!-- Button trigger modal -->

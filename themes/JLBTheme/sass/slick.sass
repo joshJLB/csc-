@@ -9,6 +9,31 @@
     height: 100%
     .hero-slide
       +bg(cover, center)
+      display: flex 
+      align-items: stretch
+      justify-content: flex-start
+      .hero-content-wrapper
+        margin-left: 10rem
+        padding: 6rem 2rem
+        width: 28%
+        position: relative
+        .hero-content 
+          position: relative
+          z-index: 999
+          padding: 8rem 3rem 6rem
+          h1, p, a 
+            color: #fff
+          h1 
+            margin-bottom: 2rem
+            font-size: 3rem
+            font-weight: 400
+          p 
+            line-height: 2rem
+            margin-bottom: 2rem
+            font-size: 1.3rem
+          a 
+            font-size: 1rem
+            text-transform: uppercase
 
 .slick-dots
   position: absolute

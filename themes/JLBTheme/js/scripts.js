@@ -85,4 +85,10 @@ function detectBrowser() {
 }
 $('body').addClass(detectBrowser());
 
+$('.hero-slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 0
+});
+
 });//close all jquery

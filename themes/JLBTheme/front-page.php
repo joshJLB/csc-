@@ -66,6 +66,24 @@ get_header(); ?>
     </div>
   </section>
 
+  <section class="four">
+    <div class="four-container" style="background-image:url(<?=get_field('testimonial_image'); ?>)">
+        <div class="testimonial-title">
+          <h1><?=get_field('testimonial_title'); ?></h1>
+        </div>
+        <div class="testimonial-slider">
+          <?php if(get_field('testimonial_slider')): ?>
+          <?php while( have_rows('testimonial_slider') ): the_row();?>
+            <div class="slide">
+              <p><?=get_sub_field('testimonial_body'); ?></p>
+              <h3><?=get_sub_field('testimonial_author'); ?></h3>
+            </div>
+          <?php endwhile; ?>
+          <?php endif; ?>
+        </div>
+    </div>
+  </section>
+
 </main>
 
 <?php get_footer();

@@ -86,7 +86,7 @@ get_header(); ?>
 
   <section class="five">
     <div class="five-container">
-      <h1>Upcoming Classes</h1>
+      <h1><?=get_field('course_title'); ?></h1>
       <div class="courses-list">
         <?php if(get_field('course_repeater')): ?>
         <?php while( have_rows('course_repeater') ): the_row();?>
@@ -97,6 +97,29 @@ get_header(); ?>
           </div>
         <?php endwhile; ?>
         <?php endif; ?>
+      </div>
+    </div>
+  </section>
+
+  <section class="six">
+    <div class="six-container">
+      <div class="blog-section-circle" style="background-image:url('http://localhost/wp-content/uploads/2018/08/YELLOW-CIRCLE-FOR-BLOG.png')">
+        <h1><?=get_field('blog_section_title'); ?></h1>
+      </div>
+      <div class="blog-section blog-section-image" style="background-image:url(<?=get_field('blog_section_image'); ?>)"></div>
+      <div class="blog-section blog-section-content">
+        <?php
+	        $args = array( 'numberposts' => '1' );
+          $recentPosts = wp_get_recent_posts( $args );
+          $mostRecent = $recentPosts[0];
+        ?>
+        <div class="blog-section-content-inner">
+          <h1><?=$mostRecent['post_title']?></h1>
+          <div class="blog-section-body">
+            <p><?=$mostRecent['post_content']?></p>
+          </div>
+          <a href="<?=get_permalink($mostRecent['ID']); ?>"><?=get_field('blog_section_button_text'); ?> >></a>
+        </div>
       </div>
     </div>
   </section>

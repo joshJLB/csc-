@@ -85,6 +85,7 @@ function detectBrowser() {
 }
 $('body').addClass(detectBrowser());
 
+// sliders
 $('.hero-slider').slick({
   infinite: true,
   slidesToShow: 1,
@@ -97,6 +98,11 @@ $('.testimonial-slider').slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000
+});
+
+// blog post excerpts
+$('.blog-section-body').text(function(index, currentContent) {
+  return currentContent.substr(0,385) + '...';
 });
 
 });//close all jquery

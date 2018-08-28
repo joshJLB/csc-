@@ -761,7 +761,7 @@
         },
         {
             "key": "field_5b859e12c8def",
-            "label": "Courses",
+            "label": "Five",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -774,6 +774,26 @@
             },
             "placement": "top",
             "endpoint": 0
+        },
+        {
+            "key": "field_5b85b8a2656f0",
+            "label": "Course Title",
+            "name": "course_title",
+            "type": "text",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5b859e1bc8df0",
@@ -878,6 +898,87 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5b85b41035e5d",
+            "label": "Six",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5b85b41b35e5e",
+            "label": "Blog Section Image",
+            "name": "blog_section_image",
+            "type": "image",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5b85b80c1d51b",
+            "label": "Blog Section Title",
+            "name": "blog_section_title",
+            "type": "text",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b85b42935e5f",
+            "label": "Blog Section Button Text",
+            "name": "blog_section_button_text",
+            "type": "text",
+            "value": null,
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -897,5 +998,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1535483534
+    "modified": 1535490229
 }

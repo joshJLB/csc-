@@ -45,6 +45,27 @@ get_header(); ?>
     </div>
   </section>
 
+  <section class="three">
+    <div class="three-container">
+      <div class="about-image" style="background-image:url(<?=get_field('about_image'); ?>)"></div>
+      <div class="about-content">
+        <h1><?=get_field('about_title'); ?></h1>
+        <p><?=get_field('about_body'); ?></p>
+
+        <?php if(get_field('about_repeater')): ?>
+        <?php while( have_rows('about_repeater') ): the_row();?>
+          <div class="certification-container">
+            <img src="<?=get_sub_field('about_image_one'); ?>" alt="" class="certification-images">
+            <img src="<?=get_sub_field('about_image_two'); ?>" alt="" class="certification-images">
+            <img src="<?=get_sub_field('about_image_three'); ?>" alt="" class="certification-images">
+            <img src="<?=get_sub_field('about_image_four'); ?>" alt="" class="certification-images">
+          </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <?php get_footer();

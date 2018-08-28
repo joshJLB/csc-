@@ -28,6 +28,23 @@ get_header(); ?>
     </div>
   </section>
 
+  <section class="two">
+    <div class="two-container">
+      <div class="our-story">
+        <h1><?=get_field('info_title_one'); ?></h1>
+        <p><?=get_field('info_body_one'); ?></p>
+        <a href="<?=get_field('info_url_one'); ?>"><?=get_field('info_link_text_one'); ?> >></a>
+        <div class="info-image-one" style="background-image:url(<?=get_field('info_image_one'); ?>)"></div>
+      </div>
+      <div class="quick-facts">
+        <h1><?=get_field('info_title_two'); ?></h1>
+        <p><?=get_field('info_body_two'); ?></p>
+        <a href="<?=get_field('info_url_two'); ?>"><?=get_field('info_link_text_two'); ?> >></a>
+        <div class="info-image-two" style="background-image:url(<?=get_field('info_image_two'); ?>)"></div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <?php get_footer();

@@ -163,6 +163,26 @@
                         "id": ""
                     },
                     "return_format": "url"
+                },
+                {
+                    "key": "field_5b85c3b9bde6b",
+                    "label": "Hero Link Text",
+                    "name": "hero_link_text",
+                    "type": "text",
+                    "value": null,
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -998,5 +1018,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1535490229
+    "modified": 1535493073
 }

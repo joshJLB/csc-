@@ -33,7 +33,7 @@
                 <div class="hero-content">
                   <h1><?=get_sub_field('title'); ?></h1>
                   <p><?=get_sub_field('body'); ?></p>
-                  <a href="<?=get_sub_field('link'); ?>">Link to page</a>
+                  <a href="<?=get_sub_field('link'); ?>"><?=get_sub_field('hero_link_text'); ?> >></a>
                   </div>
               </div>
             </div>

@@ -84,6 +84,23 @@ get_header(); ?>
     </div>
   </section>
 
+  <section class="five">
+    <div class="five-container">
+      <h1>Upcoming Classes</h1>
+      <div class="courses-list">
+        <?php if(get_field('course_repeater')): ?>
+        <?php while( have_rows('course_repeater') ): the_row();?>
+          <div class="course-card">
+            <img src="<?=get_sub_field('course_image'); ?>" alt="">
+            <h2><?=get_sub_field('course_title'); ?></h2>
+            <a href="<?=get_sub_field('course_url'); ?>"><?=get_sub_field('course_url_text'); ?> >></a>
+          </div>
+        <?php endwhile; ?>
+        <?php endif; ?>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <?php get_footer();

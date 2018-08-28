@@ -13,15 +13,24 @@
   <body <?php body_class(); ?>>
     <header>
       <div class="header">
-        <div class="header-content">
-          <a class="logo-container" href="<?php echo home_url(); ?>">
-            <div class="logo" style="background-image: url('#logo');"></div>
-          </a>
-        </div> <!-- Header Content & Logo -->
+        
         <nav class="header-nav">
-          <?php wp_nav_menu( array( 'menu' => 'Header Menu' ) ); ?>
+          <?php wp_nav_menu( array( 'menu' => 'Nav Left' ) ); ?>
+          <div class="header-content">
+          <a class="logo-container" href="<?php echo home_url(); ?>">
+            <div class="logo" style="background-image: url(<?=get_field('header_logo', 'option'); ?>);"></div>
+          </a>
+          </div> <!-- Header Content & Logo -->
+          <?php wp_nav_menu( array( 'menu' => 'Nav Right' ) ); ?>
           <!-- <button type="button" name="search"><a href="<?php echo home_url(); ?>"><i class="fas fa-search"></i></a></button> -->
         </nav> <!-- Header Navigation -->
+        
+        <!-- Mobile Header Logo -->
+        <div class="header-content-mobile">
+          <a class="logo-container-mobile" href="<?php echo home_url(); ?>">
+            <div class="logo-mobile" style="background-image: url(<?=get_field('header_logo', 'option'); ?>);"></div>
+          </a>
+        </div>
 
         <!-- Button trigger modal -->
         <div class="mobile-button">
@@ -36,7 +45,8 @@
       <!-- Mobile Menu -->
       <div class="mobile-menu" id="mobile-menu">
         <nav class="menu-container">
-          <?php wp_nav_menu( array( 'menu' => 'Header Menu' ) ); ?>
+          <?php wp_nav_menu( array( 'menu' => 'Nav Left' ) ); ?>
+          <?php wp_nav_menu( array( 'menu' => 'Nav Right' ) ); ?>
         </nav>
       </div>
 

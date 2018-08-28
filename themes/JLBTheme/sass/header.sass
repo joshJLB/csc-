@@ -11,24 +11,40 @@ header
   z-index: 999
   .header
     +fb(center, space-between)
-    padding: 1rem 2rem
+    padding: 1rem
     .header-content
+      margin: 0 1rem
       width: 20%
       .logo-container
         height: 100%
         width: 100%
         .logo
           +bg(contain, center)
-          height: 5rem
+          height: 7rem
+    .header-content-mobile
+      display: none
+      margin: 0 1rem
+      width: 50%
+      @media #{$large}
+        +fb(center, center)
+      .logo-container-mobile
+        height: 100%
+        width: 100%
+        .logo-mobile
+          +bg(contain, center)
+          height: 7rem
     .header-nav
-      width: 80%
+      width: 100%
+      +fb(center,center)
+      @media #{$large}
+        display: none
       .menu
-        +fb(center, flex-end)
+        +fb(center, center)
         padding: 0
         margin: 0
         list-style: none
         .menu-item
-          margin: 0 0.25rem
+          margin: 0 1rem
           a
             display: inline-block
             padding: 0.5rem

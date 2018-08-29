@@ -9,26 +9,48 @@
         width: 95%
         border: 1px solid $color1
         +fb(center, center)
+        @media #{$medium}
+            flex-direction: column
         .courses-homepage, .crisis-homepage
             padding: 8rem 9rem
             width: 50% 
             color: $color3
             text-align: center
+            @media #{$xxlarge}
+                padding: 4rem 5rem
+            @media #{$large}
+                padding: 2rem 1rem
+            @media #{$medium}
+                padding: 3rem 3rem
+                width: 100%
+            @media #{$small}
+                padding: 2rem .5rem
             h1 
                 margin-bottom: 3rem
                 font-size: 3rem
                 font-weight: 400
+                @media #{$small}
+                    margin-bottom: 1rem
+                    font-size: 2.5rem
             p 
                 margin-bottom: 4rem
                 line-height: 2rem
                 font-weight: 500
+                @media #{$small}
+                    margin-bottom: 1.5rem
+                    font-size: .95rem
             a 
                 color: $color3
                 font-weight: 500
                 text-transform: uppercase 
                 letter-spacing: .25rem
+                @media #{$large}
+                    font-size: .75rem
         .courses-homepage
             border-right: 1px solid $color1
+            @media #{$medium}
+                border-right: none
+                border-bottom: 1px solid $color1
 .two 
     width: 100%
     .two-container

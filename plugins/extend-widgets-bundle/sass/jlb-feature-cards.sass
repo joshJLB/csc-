@@ -1,0 +1,43 @@
+// Cards
+.card-container
+    width: 100%
+    h1 
+        text-align: center 
+    .card-container-inner
+        width: 100%
+        display: flex
+        margin: 0 auto
+        justify-content: center
+        flex-wrap: wrap
+        max-width: 70rem
+        .card-holder
+            width: 33.3%
+            padding: .5rem 2rem
+            // +below(1200px)
+            padding: .5rem 1rem
+            // +below(800px)
+            max-width: 30rem
+            .card-inner
+                background-color: white
+                .image-holder
+                    height: 15rem
+                    background-size: cover
+                    background-position: center 
+                .text-holder
+                    padding: 1rem
+                    text-align: center
+                    p
+                        font-size: .9rem
+                    a
+                        width: 100%
+                        border: .1rem solid thirdColor
+                        background-color: transparent
+                        padding: .3rem .5rem
+                        text-transform: uppercase
+                        font-family: primaryFont
+                        color: thirdColor
+                        cursor: pointer
+                        transition: .5s
+                    a:hover
+                        color: white
+                        background-color: thirdColor

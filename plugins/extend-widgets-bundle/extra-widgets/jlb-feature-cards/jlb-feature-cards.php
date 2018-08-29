@@ -19,7 +19,7 @@ class JLB_Feature_Cards extends SiteOrigin_Widget {
 
       $this->register_frontend_styles(
           array(
-              array( 'jlb-feature-cards', '/wp-content/plugins/extend-widgets-bundle/css/jlb-feature-cards.css', array() )
+              array( 'jlb-feature-cards', '/wp-content/plugins/extend-widgets-bundle/css/jlb-feature-cards.min.css', array() )
           )
       );
   }
@@ -46,6 +46,11 @@ class JLB_Feature_Cards extends SiteOrigin_Widget {
 
             //The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
             $form_options = array(
+                'card_title' => array(
+                  'type' => 'text',
+                  'label' => __('Card Title', 'widget-form-fields-text-domain')
+                ),
+                
                 'card_repeater' => array(
                     'type' => 'repeater',
                     'label' => __( 'Cards' , 'widget-form-fields-text-domain' ),

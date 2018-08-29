@@ -246,8 +246,16 @@
             background: $color1
             color: #fff 
             +fb(center, center)
+            text-align: center
+            @media #{$xlarge}
+                width: 75%
+            @media #{$small}
+                width: 85%
             h1 
+                padding: 0 .5rem
                 font-weight: 400
+                @media #{$medium}
+                    font-size: 2rem
 .five
     margin-top: 10rem
     margin-bottom: 8rem

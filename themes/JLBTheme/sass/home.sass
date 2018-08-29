@@ -56,67 +56,137 @@
     .two-container
         padding-top: 14rem
         margin-bottom: 8rem
+        @media #{$small}
+            padding-top: 5rem
+            margin-bottom: 3rem
         .our-story
-            padding: 4rem 8rem 4rem 22rem
+            padding: 4rem 8rem 4rem 25%
             margin-left: auto
-            width: 62%
+            width: 75%
             position: relative
             background: $color1
             color: #fff 
+            @media #{$xxlarge}
+                padding: 2rem 3rem 2rem 25%
+            @media #{$xlarge}
+                padding: 12rem 4rem
+                width: 100%
+            @media #{$medium}
+                padding: 12rem 2rem
+            @media #{$small}
+                padding: 12rem 1rem
             h1 
                 margin-bottom: 2rem
                 font-size: 3rem
                 font-weight: 400
+                @media #{$small}
+                    font-size: 2.5rem
             p 
                 padding-left: .1rem
                 margin-bottom: 3rem
                 line-height: 1.75rem
                 font-weight: 500
+                @media #{$xxlarge}
+                    font-weight: 400
+                    line-height: 1.5rem
             a 
                 color: #fff 
                 font-size: 1.1rem
                 font-weight: 500
                 letter-spacing: .25rem
                 text-transform: uppercase 
+                @media #{$small}
+                    font-size: .75rem
             .info-image-one
-                width: 50rem
-                height: 50rem
+                width: 40vw
+                height: 40vw
                 background-size: cover
                 position: absolute
                 top: 50%
-                left: -50%
+                left: -25%
                 transform: translateY(-50%)
+                @media #{$xlarge}
+                    top: -35%
+                    left: 50%
+                    transform: translateX(-50%)
+                @media #{$large}
+                    width: 35vw
+                    height: 35vw
+                    top: -20%
+                @media #{$medium}
+                    width: 40vw
+                    height: 40vw
+                    top: -15%
+                @media #{$small}
+                    top: -10%
+                @media #{$xsmall}
+                    width: 50vw
+                    height: 50vw
         .quick-facts
-            padding: 4rem 22rem 4rem 8rem
+            padding: 4rem 25% 4rem 8rem
             margin-top: 14rem
             margin-right: auto
-            width: 62%
+            width: 75%
             position: relative
             background: $color2
             color: #fff 
+            @media #{$xxlarge}
+                padding: 2rem 25% 2rem 3rem
+            @media #{$xlarge}
+                padding: 12rem 4rem
+                margin-top: 0
+                width: 100%
+            @media #{$medium}
+                padding: 12rem 2rem
+            @media #{$small}
+                padding: 12rem 1rem
             h1 
                 margin-bottom: 2rem
                 font-size: 3rem
                 font-weight: 400
+                @media #{$small}
+                    font-size: 2.5rem
             p 
                 padding-left: .1rem
                 margin-bottom: 3rem
                 line-height: 1.75rem
                 font-weight: 500
+                @media #{$xxlarge}
+                    font-weight: 400
+                    line-height: 1.5rem
             a 
                 color: #fff 
                 font-size: 1.1rem
                 font-weight: 500
                 letter-spacing: .25rem
-                text-transform: uppercase 
+                text-transform: uppercase
+                @media #{$small}
+                    font-size: .75rem
             .info-image-two
-                width: 50rem
-                height: 50rem
+                width: 40vw
+                height: 40vw
                 background-size: cover
                 position: absolute
                 top: 50%
-                right: -50%
+                right: -25%
                 transform: translateY(-50%)
+                @media #{$xlarge}
+                    top: -35%
+                    left: 50%
+                    transform: translateX(-50%)
+                @media #{$large}
+                    width: 35vw
+                    height: 35vw
+                    top: -20%
+                @media #{$medium}
+                    width: 40vw
+                    height: 40vw
+                    top: -15%
+                @media #{$small}
+                    top: -10%
+                @media #{$xsmall}
+                    width: 50vw
+                    height: 50vw
 .three 
     margin-bottom: 8rem
     width: 100%

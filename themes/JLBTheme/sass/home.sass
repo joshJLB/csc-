@@ -190,19 +190,35 @@
 .three 
     margin-bottom: 8rem
     width: 100%
+    @media #{$small}
+        margin-bottom: 3rem
     .three-container
         margin: 0 auto 
         width: 75%
         +fb(stretch, center)
+        @media #{$xxlarge}
+            width: 85%
+        @media #{$xlarge}
+            width: 95%
+        @media #{$large}
+            flex-direction: column
         .about-image
             width: 38%
             background-size: cover
+            @media #{$large}
+                width: 100%
+                height: 30rem
         .about-content
             padding: 2rem 2rem 2rem 4rem
             width: 62%
             +fb(flex-start, center)
             flex-direction: column 
             color: $color3
+            @media #{$large}
+                padding: 3rem 0
+                width: 100%
+            @media #{$small}
+                padding: 3rem 0 0
             h1 
                 margin-bottom: 2.5rem
                 font-weight: 400

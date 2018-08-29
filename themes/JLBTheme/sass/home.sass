@@ -314,6 +314,8 @@
     .six-container
         +fb(stretch, flex-start)
         position: relative
+        @media #{$large}
+            flex-direction: column
         .blog-section-circle
             width: 20rem
             height: 20rem
@@ -325,21 +327,46 @@
             +fb(center,center)
             text-align: center
             color: $color3
+            @media #{$xlarge}
+                width: 15rem
+                height: 15rem
+            @media #{$large}
+                top: 40%
+            @media #{$small}
+                top: 36%
+            @media #{$xsmall}
+                top: 34%
             h1 
                 font-weight: 500
+                @media #{$xlarge}
+                    font-size: 2rem
         .blog-section
             width: 50%
+            @media #{$large}
+                width: 100%
         .blog-section-image
             background-size: cover
+            @media #{$large}
+                height: 25rem
         .blog-section-content
             background: $color1 
             +fb(center, center)
             .blog-section-content-inner
                 padding: 13rem 10rem 13rem 15rem
                 color: #fff 
+                @media #{$xxlarge}
+                    padding: 10rem 5rem 10rem 12rem
+                @media #{$xlarge}
+                    padding: 6rem 2rem 6rem 10rem
+                @media #{$large}
+                    padding: 12rem 7rem
+                @media #{$medium}
+                    padding: 12rem 2rem
                 h1 
                     margin-bottom: 2rem
                     font-weight: 400
+                    @media #{$small}
+                        font-size: 2rem
                 .blog-section-body
                     margin-bottom: 2rem
                     font-weight: 500

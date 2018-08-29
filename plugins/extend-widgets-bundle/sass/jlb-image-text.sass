@@ -7,14 +7,25 @@
     width: 100%
     background-color: lightgray
     color: $color3
+    @media #{$large}
+        padding: 3rem 0
     .image-text-inner
         margin: 0 auto
-        width: 75%
+        width: 80%
         +fb(center, center)
+        @media #{$xxlarge}
+            width: 90%
+        @media #{$large}
+            flex-wrap: wrap
         .image-text-content, .image-text-wrapper
             padding: 0 2rem
             width: 50%
+            @media #{$large}
+                padding: 0
+                width: 100%
         .image-text-wrapper
+            @media #{$large}
+                margin-bottom: 3rem
             img 
                 width: 100%
         .image-text-content
@@ -22,5 +33,7 @@
                 margin-bottom: 1rem
                 font-size: 3rem
                 font-weight: 400
+                @media #{$xxlarge}
+                    font-size: 2.5rem
             p 
                 font-weight: 500

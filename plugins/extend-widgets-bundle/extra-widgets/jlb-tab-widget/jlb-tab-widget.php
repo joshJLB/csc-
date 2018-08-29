@@ -51,10 +51,18 @@ class JLB_Tab_Widget extends SiteOrigin_Widget {
                     'label' => __( 'Tabs' , 'widget-form-fields-text-domain' ),
                     'item_name'  => __( 'Tab', 'siteorigin-widgets' ),
                     'fields' => array(
-                        'repeat_text' => array(
-                            'type' => 'text',
-                            'label' => __( 'Tab Title', 'widget-form-fields-text-domain' )
+                        'image' => array(
+                          'type' => 'media',
+                          'label' => __('Choose an Image', 'widget-form-fields-text-domain'),
+                          'choose' => __( 'Choose image', 'widget-form-fields-text-domain' ),
+                          'update' => __( 'Set image', 'widget-form-fields-text-domain' ),
+                          'library' => 'image',
                         ),
+                        'tab_title' => array(
+                          'type' => 'text',
+                          'label' => __('Tab Title', 'widget-form-fields-text-domain')
+                        ),
+                        
                         'tab_content' => array(
                                 'type' => 'tinymce',
                                 'label' => __( 'Content For Tab', 'widget-form-fields-text-domain' ),
@@ -66,18 +74,8 @@ class JLB_Tab_Widget extends SiteOrigin_Widget {
                                     'mce_buttons_3' => array( $this, 'filter_mce_buttons_3' ),
                                     'mce_buttons_4' => array( $this, 'filter_mce_buttons_5' ),
                                     'quicktags_settings' => array( $this, 'filter_quicktags_settings' ),
-                                ),
                             ),
-
-                            'link_text' => array(
-                                'type' => 'text',
-                                'label' => __( 'Link Text', 'widget-form-fields-text-domain' )
-                            ),
-
-                            'link' => array(
-                                'type' => 'text',
-                                'label' => __( 'Link', 'widget-form-fields-text-domain' )
-                            ),
+                        ),
                     )
                 )
             ),

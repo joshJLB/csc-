@@ -19,7 +19,7 @@ class JLB_Tab_Widget extends SiteOrigin_Widget {
   function initialize() {
       $this->register_frontend_styles(
           array(
-              array( 'jlb-tab-css', '/wp-content/plugins/extend-widgets-bundle/css/jlb-tab-widget.css', array() )
+              array( 'jlb-tab-css', '/wp-content/plugins/extend-widgets-bundle/css/jlb-tab-widget.min.css', array() )
           )
       );
   }

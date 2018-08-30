@@ -9,7 +9,7 @@ get_header(); ?>
   <?php get_template_part('components/header/child-header'); ?>
 
   <div class="contact-container">
-    <!-- Site Origin or Custom, you decide! -->
+    <!-- Site Origin or Custom, you decide! --> 
   </div>
 
 </main>

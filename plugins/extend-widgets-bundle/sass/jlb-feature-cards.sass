@@ -1,43 +1,71 @@
+@import 'variables'
+    
 // Cards
 .card-container
+    margin: 3rem 0
     width: 100%
+    color: $color3
     h1 
+        margin-bottom: 2rem
         text-align: center 
+        @media #{$large}
+            margin-bottom: 1.5rem
+            font-size: 2rem
     .card-container-inner
-        width: 100%
+        width: 75%
         display: flex
         margin: 0 auto
-        justify-content: center
+        justify-content: flex-start
         flex-wrap: wrap
-        max-width: 70rem
+        @media #{$xxlarge}
+            width: 85%
+        @media #{$large}
+            width: 99%
         .card-holder
             width: 33.3%
-            padding: .5rem 2rem
-            // +below(1200px)
             padding: .5rem 1rem
-            // +below(800px)
-            max-width: 30rem
+            @media #{$large}
+                padding: .5rem
+            @media #{$medium}
+                padding: .5rem 0
+                margin: 0 auto 1.5rem
+                width: 90%
+                border-bottom: 1px solid $color1
             .card-inner
                 background-color: white
                 .image-holder
                     height: 15rem
                     background-size: cover
                     background-position: center 
+                    @media #{$xlarge}
+                        height: 10rem
+                    @media #{$medium}
+                        height: 20rem
+                    @media #{$small}
+                        height: 15rem
                 .text-holder
                     padding: 1rem
                     text-align: center
+                    h2 
+                        text-transform: uppercase
+                        @media #{$xlarge}
+                            font-size: 1.5rem
+                        @media #{$medium}
+                            font-size: 1.3rem
                     p
                         font-size: .9rem
                     a
                         width: 100%
-                        border: .1rem solid thirdColor
-                        background-color: transparent
                         padding: .3rem .5rem
-                        text-transform: uppercase
-                        font-family: primaryFont
-                        color: thirdColor
+                        text-transform: lowercase
+                        color: $color3
+                        font-weight: bold
                         cursor: pointer
                         transition: .5s
+                        @media #{$medium}
+                            font-size: .75rem
                     a:hover
-                        color: white
-                        background-color: thirdColor
+                        color: $color1
+        .card-holder:last-child 
+            @media #{$medium}
+                border-bottom: none

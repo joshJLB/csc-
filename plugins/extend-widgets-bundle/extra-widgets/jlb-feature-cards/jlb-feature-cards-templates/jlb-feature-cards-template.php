@@ -18,9 +18,9 @@ $cardTitle = $instance['card_title']
       <div class="card-inner">
         <div class="image-holder" style="background-image:url(<?=$imageURL?>);"></div>
         <div class="text-holder">
-          <h5><?=$cardTitle?></h5>
+          <h2><?=$cardTitle?></h2>
           <p><?=$cardText?></p>
-          <a href="<?=$link?>"><?=$linkText?></a>
+          <a href="<?=$link?>"><?=$linkText?> >></a>
         </div>
       </div>
     </div>

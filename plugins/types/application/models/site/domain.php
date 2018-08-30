@@ -35,7 +35,7 @@ class Types_Site_Domain {
 	private function get_host_of_string( $domain ) {
 		if ( preg_match( '/\/([a-z0-9äöü][a-z0-9äöü\-\.]{0,252})/i', $domain, $matches ) ) {
 			// this is not for verifaction, this is just for getting any kind of host part of an url.
-			// to also support any local urls like "http://localhost/anything" or "https://127.0.0.1/anything"
+			// to also support any local urls like "<?=home_url(); ?>/anything" or "https://127.0.0.1/anything"
 			return $matches[1];
 		}
 

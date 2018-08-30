@@ -1,7 +1,7 @@
 @import 'variables'
 
 // Slick Styling
-#home
+#home, .slider-widget-inner
   .hero-slider
     height: 100%
     width: 100%
@@ -75,15 +75,18 @@
       width: 95%
     button 
       display: none !important
-    p 
-      margin-bottom: 3rem
-      font-size: 1.3rem
-      font-weight: 500
-      line-height: 2rem
-      @media #{$small}
-        font-size: 1rem
-        font-weight: 400
+    .slide-inner
+      padding: 0
+      p 
+        font-size: 1.3rem
+        color: #fff 
+        font-weight: 500
+        line-height: 2rem
+        @media #{$small}
+          font-size: 1rem
+          font-weight: 400
     h3 
+      margin-top: 3rem
       font-size: 1.3rem
       font-weight: 300
 

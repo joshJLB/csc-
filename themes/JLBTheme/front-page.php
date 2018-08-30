@@ -75,7 +75,9 @@ get_header(); ?>
           <?php if(get_field('testimonial_slider')): ?>
           <?php while( have_rows('testimonial_slider') ): the_row();?>
             <div class="slide">
-              <p><?=get_sub_field('testimonial_body'); ?></p>
+              <div class="slide-inner">
+                <p class="testimonial-paragraph"><?=get_sub_field('testimonial_body'); ?></p>
+              </div>
               <h3><?=get_sub_field('testimonial_author'); ?></h3>
             </div>
           <?php endwhile; ?>

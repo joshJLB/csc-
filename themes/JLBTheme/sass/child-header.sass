@@ -5,11 +5,19 @@
   +bg(cover, center)
   +fb(stretch, flex-start)
   padding: 0
+  @media #{$medium}
+    padding-top: 10rem
   .child-title-wrapper
     padding: 18rem 5rem 9rem
     margin-left: 10rem
     background: $color2
+    @media #{$medium}
+      padding: 5rem
+      margin: 8rem 0 0
+      width: 100%
     .title
       color: #fff 
       font-weight: 300
       text-align: left
+      @media #{$medium}
+        text-align: center

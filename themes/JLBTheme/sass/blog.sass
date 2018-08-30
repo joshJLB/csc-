@@ -1,3 +1,67 @@
 @import 'variables'
 
 // Blog Styling
+.blog-container
+    margin: 3rem auto
+    width: 90%
+    @media screen and (max-width: 1440px)
+        width: 95%
+    @media #{$xlarge}
+        width: 100%
+    .blog-posts
+        padding: 2rem
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start 
+        @media screen and (max-width: 1024px)
+            padding: 1rem 0
+        .blog-post-container
+            padding: 2rem 2rem
+            width: 25%
+            background: #fff
+            @media #{$xxlarge}
+                width: 33%
+            @media #{$large}
+                padding: 1rem
+            @media screen and (max-width: 768px)
+                width: 50%
+            @media screen and (max-width: 475px)
+                width: 100%   
+            .blog-post
+                box-shadow: 0px 0px 10px gray 
+                h5 
+                    padding: .5rem
+                    text-align: center
+                    color: #fff 
+                    font-size: 1.5rem 
+                    font-weight: 300
+                    text-transform: uppercase
+                    letter-spacing: .5rem
+                    background-color: $color1
+                h3 
+                    padding: 1rem 0 .5rem 0
+                    margin: 0 auto
+                    width: 90%
+                    color: $color3
+                    font-size: 1.2rem
+                    text-align: center
+                    border-bottom: 1px solid black 
+                .blog-body 
+                    padding: .25rem 0
+                    margin: 0 auto
+                    width: 90%
+                    color: $color3
+                    font-size: .8rem
+                .blog-link 
+                    padding: 1rem 0
+                    text-align: center
+                    a 
+                        padding: .5rem
+                        color: $color2
+                        border: 1px solid $color2 
+                    a:hover 
+                        background-color: $color2
+                        color: #fff 
+                        transition: .5s
+                        border: transparent

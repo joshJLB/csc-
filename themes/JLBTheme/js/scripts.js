@@ -101,6 +101,15 @@ $('.testimonial-slider').slick({
 });
 
 // substrings
+function subStrings(index, currentContent) {
+  return currentContent.substr(0,385) + '...';
+}
+
+// $('.blog-section-body').text(subStrings());
+$('.blog-body').text(function(index, currentContent) {
+  return currentContent.substr(0,385) + '...';
+});
+
 $('.blog-section-body').text(function(index, currentContent) {
   return currentContent.substr(0,385) + '...';
 });
@@ -112,13 +121,5 @@ $('.testimonial-paragraph').text(function(index, currentContent) {
     return currentContent.substr(0,385) + '...';
   }
 });
-
-// $('.slide-widget-inner').text(function(index, currentContent) {
-//   if (currentContent.length < 385) {
-//     return currentContent;
-//   } else {
-//     return currentContent.substr(0,385) + '...';
-//   }
-// });
 
 });//close all jquery

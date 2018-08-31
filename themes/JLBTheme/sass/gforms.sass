@@ -1,7 +1,6 @@
 @import 'variables'
 
-// Gravity Forms Styling
-
+// Widget Styling
 .widget_gform_widget
     margin: 3rem auto 3rem
     width: 75%
@@ -70,10 +69,23 @@
         .gform_button:hover
             color: $color1
             transition: .25s
+
+// contact page form
 .panel-grid.panel-has-style > .panel-row-style.contact-container
     .panel-grid-cell
         .widget_gform_widget
+            margin: 0 auto
             .gfield
                 @media #{$xxlarge}
                     margin-top: 1rem
                     width: 100%
+                    .ginput_container
+                        input.large, textarea
+                            padding: 1rem
+                        input.large::placeholder, textarea::placeholder
+                            font-size: .85rem
+                        textarea
+                            height: 12rem
+            .gform_footer
+                @media #{$xxlarge}
+                    margin-top: -2rem

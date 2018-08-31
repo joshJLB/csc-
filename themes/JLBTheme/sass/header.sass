@@ -56,10 +56,12 @@ header
             transform: rotate(180deg) translateY(50%)
             transform-origin: center
         .menu-item-has-children
+          padding-right: 1rem
           position: relative
           +fb(center, center)
           &:after
             content: '\f107'
+            color: $color1
             font-family: 'Font Awesome 5 Pro'
             +fb(center, center)
             cursor: pointer
@@ -71,8 +73,11 @@ header
           .sub-menu.scrollMenu
             // on scroll sub menu
           .sub-menu.active
+            padding: .5rem 1rem
+            background-color: #fff 
             opacity: 1
             pointer-events: auto
+            border: 1px solid $color1
           .sub-menu
             opacity: 0
             pointer-events: none
@@ -87,6 +92,10 @@ header
               white-space: nowrap
               a
                 padding: 0.25rem
+                border-bottom: 1px solid transparent
+              a:hover 
+                border-bottom: 1px solid $color2
+                transition: .5s
 
 // Mobile Menu Button
 .mobile-button
@@ -154,10 +163,10 @@ header
 
 // mobile menu button that changes to X
 .bar.active
-  background-color: black !important
+  background-color: $color1 !important
 
 .bar
-  background-color: black
+  background-color: $color1
   height: 4px
   width: 2rem
   margin-bottom: 5px

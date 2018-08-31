@@ -46,6 +46,9 @@
                 letter-spacing: .25rem
                 @media #{$large}
                     font-size: .75rem
+            a:hover 
+                color: $color2
+                transition: .25s
         .courses-homepage
             border-right: 1px solid $color1
             @media #{$medium}
@@ -97,6 +100,9 @@
                 text-transform: uppercase 
                 @media #{$small}
                     font-size: .75rem
+            a:hover 
+                color: $color3
+                transition: .25s
             .info-image-one
                 width: 40vw
                 height: 40vw
@@ -162,6 +168,9 @@
                 text-transform: uppercase
                 @media #{$small}
                     font-size: .75rem
+            a:hover 
+                color: $color3
+                transition: .25s
             .info-image-two
                 width: 40vw
                 height: 40vw
@@ -309,6 +318,9 @@
                         font-size: .75rem
                     @media #{$large}
                         font-size: 1rem
+                a:hover 
+                    color: $color2
+                    transition: .25s
 .six, .recent-blog-widget-container 
     width: 100%
     .six-container
@@ -336,10 +348,20 @@
                 top: 36%
             @media #{$xsmall}
                 top: 34%
+            .blog-section-circle-hover
+                opacity: 0
             h1 
+                z-index: 3
+                position: relative
                 font-weight: 500
                 @media #{$xlarge}
                     font-size: 2rem
+        .blog-section-circle:hover
+            .blog-section-circle-hover
+                opacity: 1
+                transition: .5s
+            h1 
+                color: $color2 
         .blog-section
             width: 50%
             @media #{$large}
@@ -376,3 +398,6 @@
                     font-size: 1rem
                     letter-spacing: .25rem
                     text-transform: uppercase
+                a:hover 
+                    color: $color3
+                    transition: .25s

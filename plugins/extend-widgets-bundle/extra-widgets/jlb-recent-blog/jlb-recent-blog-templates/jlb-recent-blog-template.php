@@ -7,6 +7,7 @@ $link = $instance['recent_blog_link_title'];
 <div class="recent-blog-widget-container">
     <div class="six-container">
       <div class="blog-section-circle" style="background-image:url('<?=home_url(); ?>/wp-content/uploads/2018/08/YELLOW-CIRCLE-FOR-BLOG.png')">
+      <div class="blog-section-circle-hover overlay3"></div>
         <h1><?=$title; ?></h1>
       </div>
       <div class="blog-section blog-section-image" style="background-image:url(<?=$image; ?>)"></div>

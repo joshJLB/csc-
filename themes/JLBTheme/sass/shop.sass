@@ -1,0 +1,19 @@
+@import 'variables'
+
+// woo commerce shop styles
+div.woocommerce
+    margin: 3rem auto
+    width: 85%
+    .woocommerce-result-count, .orderby
+        display: none
+    ul.products 
+        padding: 1rem
+        +fb(stretch, flex-start)
+        flex-wrap: wrap
+        li.product
+            padding: 1rem 3rem 3rem
+            margin: 0
+            width: 33.3%
+            .onsale 
+                top: .5rem
+                right: 3rem

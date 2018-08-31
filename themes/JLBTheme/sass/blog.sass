@@ -65,3 +65,55 @@
                         color: #fff 
                         transition: .5s
                         border: transparent
+.single-post-container
+    margin: 3rem 0
+    .single-blog
+        margin: 0 auto
+        width: 85%
+        +fb(center, center)
+        flex-wrap: nowrap
+        @media #{$xlarge}
+            width: 95%
+        @media #{$large}
+            flex-wrap: wrap
+        .single-blog-image
+            padding: 8rem 5rem
+            width: 30%
+            +fb(center,center)
+            background-size: cover
+            position: relative
+            @media #{$large}
+                width: 100%
+            .single-blog-date
+                z-index: 3
+                padding: 1rem 2rem
+                border-radius: 5px
+                text-align: center
+                background-color: $color1
+                position: relative
+                h4 
+                    margin-bottom: 0
+                    color: #fff 
+                    font-weight: 300
+                    text-transform: uppercase
+        .single-blog-content
+            padding: 4rem 0 4rem 4rem
+            width: 70%
+            font-size: .85rem
+            color: $color3
+            +fb(center, flex-start)
+            flex-wrap: wrap
+            @media #{$xlarge}
+                padding-left: 2rem
+            @media #{$large}
+                padding-left: 0
+                width: 85%
+            @media #{$medium}
+                width: 90%
+            p 
+                font-weight: 500
+                text-indent: 3rem
+            h4 
+                margin-left: auto
+                font-weight: 300
+                

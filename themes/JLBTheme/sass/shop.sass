@@ -5,89 +5,142 @@ div.woocommerce-message
     border-top-color: $color1
 div.woocommerce-message:before
     color: $color1
-div.woocommerce
-    margin: 3rem auto
-    width: 85%
-    @media #{$small}
-        width: 95%
-    // shop page styles
-    .woocommerce-result-count, .orderby
-        display: none
-    ul.products 
-        padding: 1rem
-        +fb(stretch, flex-start)
-        flex-wrap: wrap
-        li.product
-            padding: 1rem 3rem 3rem
-            margin: 0
-            width: 33.3%
-            @media #{$xlarge}
-                padding: 2rem 1rem
-                width: 50%
-            @media #{$medium}
-                width: 100% !important
-            .onsale 
-                background-color: $color2
-                top: .5rem
-                right: 3rem
+.woocommerce-page-container
+    margin: 3rem 0
+    +fb(flex-start, flex-start)
+    div.woo-sidebar
+        width: 15%
+    div.woocommerce
+        // margin: 3rem auto
+        width: 85%
+        @media #{$small}
+            width: 95%
+        h1.page-title
+            display: none
+        .woocommerce-result-count
+            padding-left: 4rem
+        .woocommerce-ordering
+            padding-right: 4rem
+        // shop page styles
+        ul.products 
+            padding: 1rem
+            +fb(stretch, flex-start)
+            flex-wrap: wrap
+            li.product
+                padding: 1rem 3rem 3rem
+                margin: 0
+                width: 33.3%
                 @media #{$xlarge}
-                    right: .5rem
-            img 
-                border-radius: 5px
-            h2 
-                color: $color3
-            .price 
-                del 
-                    span 
-                       color: $color1
-                ins 
-                    span 
+                    padding: 2rem 1rem
+                    width: 50%
+                @media #{$medium}
+                    width: 100% !important
+                .onsale 
+                    background-color: $color2
+                    top: .5rem
+                    right: 3rem
+                    @media #{$xlarge}
+                        right: .5rem
+                img 
+                    border-radius: 5px
+                h2 
+                    color: $color3
+                .price 
+                    del 
+                        span 
                         color: $color1
-            .add_to_cart_button
-                background-color: $color1
-                color: #fff
-            .add_to_cart_button:hover
-                background-color: #6b8e93
-                transition: .25s
-    // single product page styles
-    div.single-product
-        div.product
-            .onsale
-                background-color: $color2
-            img 
-                border-radius: 5px
-            div.summary
-                .price
-                    del, ins 
-                        color: $color1 
-                p 
-                    text-indent: 0
-                .single_add_to_cart_button
+                    ins 
+                        span 
+                            color: $color1
+                .add_to_cart_button
                     background-color: $color1
-                .single_add_to_cart_button:hover
+                    color: #fff
+                .add_to_cart_button:hover
                     background-color: #6b8e93
                     transition: .25s
-            div.woocommerce-tabs
-                h2 
-                    font-weight: 400
-    // cart page styles
-    .woocommerce-cart-form
-        thead 
-            text-transform: uppercase
-    .cart-collaterals
-        .wc-proceed-to-checkout
-            a 
-                background-color: $color1
-            a:hover 
-                background-color: #6b8e93
-                transition: .25s
-    // checkout page styles
-    .woocommerce-info 
-        border-top-color: $color1
-    .woocommerce-info:before
-        color: $color1
-    .woocommerce-checkout
-        div.col2-set 
+        // single product page styles
+        div.single-product
+            div.product
+                .onsale
+                    background-color: $color2
+                img 
+                    border-radius: 5px
+                div.summary
+                    .price
+                        del, ins 
+                            color: $color1 
+                    p 
+                        text-indent: 0
+                    .single_add_to_cart_button
+                        background-color: $color1
+                    .single_add_to_cart_button:hover
+                        background-color: #6b8e93
+                        transition: .25s
+                div.woocommerce-tabs
+                    h2 
+                        font-weight: 400
+        // cart page styles
+        .woocommerce-cart-form
+            thead 
+                text-transform: uppercase
+        .cart-collaterals
+            .wc-proceed-to-checkout
+                a 
+                    background-color: $color1
+                a:hover 
+                    background-color: #6b8e93
+                    transition: .25s
+        // checkout page styles
+        .woocommerce-info 
+            border-top-color: $color1
+        .woocommerce-info:before
+            color: $color1
+        .woocommerce-checkout
+            div.col2-set 
+                margin-bottom: 3rem
+                +fb(flex-start, flex-start)
+                flex-wrap: wrap
+                div.col-1
+                    width: 50%
+                    max-width: 100%
+                    float: none
+                    flex: none
+                    @media #{$medium}
+                        width: 100%
+                    .woocommerce-billing-fields__field-wrapper
+                        flex: none
+                        p 
+                            width: 100%
+                            float: none
+                            flex-direction: column
+                            input
+                                padding: 1rem
+                div.col-2 
+                    width: 50%
+                    max-width: 100%
+                    float: none
+                    flex-direction: column
+                    flex-basis: auto
+                    @media #{$medium}
+                        width: 100%
+                        margin-top: 1rem
+                    .woocommerce-additional-fields__field-wrapper p
+                        +fb(flex-start, flex-start)
+                        flex-direction: column
+                        .woocommerce-input-wrapper
+                            width: 100%
+                            textarea
+                                height: 15rem
+            .woocommerce-checkout-review-order
+                .place-order
+                    button
+                        margin-left: .25rem
+                        background-color: $color1
+                    button:hover
+                        background-color: #6b8e93
+        // my account page styles
+        // my account - navigation styles
+        #customer_login
             margin-bottom: 3rem
             +fb(flex-start, flex-start)
             flex-wrap: wrap
@@ -97,15 +150,7 @@ div.woocommerce
                 float: none
                 flex: none
                 @media #{$medium}
-                    width: 100%
-                .woocommerce-billing-fields__field-wrapper
-                    flex: none
-                    p 
-                        width: 100%
-                        float: none
-                        flex-direction: column
-                        input
-                            padding: 1rem
+                    width: 100% 
             div.col-2 
                 width: 50%
                 max-width: 100%
@@ -115,63 +160,63 @@ div.woocommerce
                 @media #{$medium}
                     width: 100%
                     margin-top: 1rem
-                .woocommerce-additional-fields__field-wrapper p
-                    +fb(flex-start, flex-start)
-                    flex-direction: column
-                    .woocommerce-input-wrapper
-                        width: 100%
-                        textarea
-                            height: 15rem
-        .woocommerce-checkout-review-order
-            .place-order
-                button
+        .woocommerce-MyAccount-navigation
+            ul 
+                padding: 0
+                list-style: none
+                li 
+                    padding: 1rem 1rem
+                    border: 1px solid $color1
+                    border-bottom: none
+                    a 
+                        padding: .5rem
+                        font-weight: 500
+                        letter-spacing: .25rem
+                li:last-child 
+                    border-bottom: 1px solid $color1
+                li:hover 
                     background-color: $color1
-                button:hover
-                    background-color: #6b8e93
-        .woocommerce-checkout-review-order.is-trident
-            .place-order
-                flex-direction: column 
-                button
-                    width: 15%
-    // my account page styles
-    // my account - navigation styles
-    .woocommerce-MyAccount-navigation
-        ul 
-            padding: 0
-            list-style: none
-            li 
-                padding: 1rem 1rem
-                border: 1px solid $color1
-                border-bottom: none
-                a 
-                    padding: .5rem
-                    font-weight: 500
-                    letter-spacing: .25rem
-            li:last-child 
-                border-bottom: 1px solid $color1
-            li:hover 
+                    transition: 1s
+                    a 
+                        color: #fff 
+        // my account - addresses styles
+        .woocommerce-Addresses 
+            margin-top: 2rem
+            +fb(flex-start, center)
+            flex-wrap: wrap
+            div.col-1, div.col-2 
+                padding: .5rem 1rem
+                width: 50%
+                max-width: 50%
+                float: none
+                flex-basis: auto
+                @media #{$medium}
+                    width: 100%
+                    max-width: 100%
+                .woocommerce-Address-title
+                    margin-bottom: .5rem
+        .woocommerce-address-fields
+            .woocommerce-address-fields__field-wrapper
+                +fb(flex-start, flex-start)
+                flex-wrap: wrap
+                p 
+                    width: 100%
+                    float: none
+                    flex-direction: column
+                    input
+                        padding: 1rem 
+                p.button 
+                    margin-top: 2rem
+            .button
+                padding: 1rem
+                margin-top: 1rem
+                color: #fff 
+                font-weight: 400
                 background-color: $color1
-                transition: 1s
-                a 
-                    color: #fff 
-    // my account - addresses styles
-    .woocommerce-Addresses 
-        margin-top: 2rem
-        +fb(flex-start, center)
-        flex-wrap: wrap
-        div.col-1, div.col-2 
-            padding: .5rem 1rem
-            width: 50%
-            max-width: 50%
-            float: none
-            flex-basis: auto
-            @media #{$medium}
-                width: 100%
-                max-width: 100%
-            .woocommerce-Address-title
-                margin-bottom: .5rem
-    .woocommerce-address-fields
-        .woocommerce-address-fields__field-wrapper
+            .button:hover
+                background-color: #6b8e93
+        // my account - account details styles
+        .woocommerce-EditAccountForm
             +fb(flex-start, flex-start)
             flex-wrap: wrap
             p 
@@ -182,56 +227,53 @@ div.woocommerce
                     padding: 1rem 
             p.button 
                 margin-top: 2rem
-        .button
-            padding: 1rem
-            margin-top: 1rem
-            color: #fff 
-            font-weight: 400
-            background-color: $color1
-        .button:hover
-            background-color: #6b8e93
-    // my account - account details styles
-    .woocommerce-EditAccountForm
-        +fb(flex-start, flex-start)
-        flex-wrap: wrap
-        p 
-            width: 100%
-            float: none
-            flex-direction: column
+            .button
+                padding: 1rem
+                margin-top: 1rem
+                color: #fff 
+                font-weight: 400
+                background-color: $color1
+            .button:hover
+                background-color: #6b8e93
+                transition: .5s 
+        // login page styles 
+        .woocommerce-form-login
+            +fb(flex-start, flex-start)
+            flex-wrap: wrap
+            .woocommerce-form-row
+                width: 100%
+            p  
+                float: none
+                flex-direction: column
+                input
+                    padding: 1rem 
+            p.button 
+                margin-top: 2rem
+            .button
+                padding: 1rem
+                margin-top: 1rem
+                color: #fff 
+                font-weight: 400
+                background-color: $color1
+            .button:hover
+                background-color: #6b8e93
+                transition: .5s
+            .woocommerce-LostPassword
+                width: 100%
+    .woo-sidebar
+        li 
+            list-style: none
             input
-                padding: 1rem 
-        p.button 
-            margin-top: 2rem
-        .button
-            padding: 1rem
-            margin-top: 1rem
-            color: #fff 
-            font-weight: 400
-            background-color: $color1
-        .button:hover
-            background-color: #6b8e93
-            transition: .5s 
-    // login page styles 
-    .woocommerce-form-login
-        +fb(flex-start, flex-start)
-        flex-wrap: wrap
-        .woocommerce-form-row
-            width: 100%
-        p  
-            float: none
-            flex-direction: column
-            input
-                padding: 1rem 
-        p.button 
-            margin-top: 2rem
-        .button
-            padding: 1rem
-            margin-top: 1rem
-            color: #fff 
-            font-weight: 400
-            background-color: $color1
-        .button:hover
-            background-color: #6b8e93
-            transition: .5s
-        .woocommerce-LostPassword
-            width: 100%
+                padding: .5rem
+                margin-bottom: .75rem
+                border: 1px solid $color1
+            button 
+                padding: .25rem .5rem
+                background-color: $color1
+                border: none
+                border-radius: 3px
+                color: #fff 
+            button:hover 
+                background-color: #6b8e93
+                transition: .25s
+                cursor: pointer

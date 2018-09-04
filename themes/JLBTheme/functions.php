@@ -37,6 +37,7 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueues', 100 );
 
 //Add support for post featured image_type_to_extension
 add_theme_support( 'post-thumbnails' );
+add_theme_support('woocommerce');
 
 // custom widget functions
 // include '/custom-functions/widgets/custom-widget-functions.php';
@@ -61,9 +62,11 @@ function custom_sidebars() {
 	register_sidebar( $sidebar2 );
 
   $sidebar3 = array(
-    'id'            => 'sidebarWoo',
+    'id'            => 'woo-sidebar',
 		'class'         => 'sideBar',
-		'name'          => __( 'Woocommerce Sidebar', 'text_domain' ),
+		'name'          => __( 'Woocommerce Sidebar'),
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'  => '</h3>',
   );
   register_sidebar( $sidebar3 );
 

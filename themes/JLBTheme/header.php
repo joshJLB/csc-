@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="<?php bloginfo('charset'); ?>">
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo home_url(); ?>">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo home_url(); ?>/wp-content/uploads/2018/09/CSC-FAV.png">
     <link rel="apple-touch-icon" href="<?php echo home_url(); ?>"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500" rel="stylesheet">

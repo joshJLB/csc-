@@ -92,7 +92,8 @@ $('.woocommerce-checkout-review-order').addClass(detectBrowser());
 $('.hero-slider').slick({
   infinite: true,
   slidesToShow: 1,
-  slidesToScroll: 0
+  autoplay: true,
+  autoplaySpeed: 3000
 });
 
 $('.testimonial-slider').slick({

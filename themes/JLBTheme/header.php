@@ -11,7 +11,7 @@
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
-    <header>
+    <header class="top-nav">
       <div class="header">
         
         <nav class="header-nav">

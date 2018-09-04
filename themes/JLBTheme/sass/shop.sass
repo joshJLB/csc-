@@ -1,15 +1,15 @@
 @import 'variables'
 
 // woocommerce styles
+div.woocommerce-message
+    border-top-color: $color1
+div.woocommerce-message:before
+    color: $color1
 div.woocommerce
     margin: 3rem auto
     width: 85%
     @media #{$small}
-        width: 100%
-    div.woocommerce-message
-        border-top-color: $color1
-    div.woocommerce-message:before
-        color: $color1
+        width: 95%
     // shop page styles
     .woocommerce-result-count, .orderby
         display: none
@@ -30,6 +30,8 @@ div.woocommerce
                 background-color: $color2
                 top: .5rem
                 right: 3rem
+                @media #{$xlarge}
+                    right: .5rem
             img 
                 border-radius: 5px
             h2 
@@ -94,6 +96,8 @@ div.woocommerce
                 max-width: 100%
                 float: none
                 flex: none
+                @media #{$medium}
+                    width: 100%
                 .woocommerce-billing-fields__field-wrapper
                     flex: none
                     p 
@@ -104,10 +108,13 @@ div.woocommerce
                             padding: 1rem
             div.col-2 
                 width: 50%
-                max-width: 50%
+                max-width: 100%
                 float: none
                 flex-direction: column
                 flex-basis: auto
+                @media #{$medium}
+                    width: 100%
+                    margin-top: 1rem
                 .woocommerce-additional-fields__field-wrapper p
                     +fb(flex-start, flex-start)
                     flex-direction: column
@@ -115,8 +122,18 @@ div.woocommerce
                         width: 100%
                         textarea
                             height: 15rem
+        .woocommerce-checkout-review-order
+            .place-order
+                button
+                    background-color: $color1
+                button:hover
+                    background-color: #6b8e93
+        .woocommerce-checkout-review-order.is-trident
+            .place-order
+                flex-direction: column 
+                button
+                    width: 15%
     // my account page styles
-
     // my account - navigation styles
     .woocommerce-MyAccount-navigation
         ul 
@@ -148,6 +165,9 @@ div.woocommerce
             max-width: 50%
             float: none
             flex-basis: auto
+            @media #{$medium}
+                width: 100%
+                max-width: 100%
             .woocommerce-Address-title
                 margin-bottom: .5rem
     .woocommerce-address-fields

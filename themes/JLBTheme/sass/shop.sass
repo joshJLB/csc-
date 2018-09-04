@@ -4,6 +4,9 @@
 div.woocommerce
     margin: 3rem auto
     width: 85%
+    @media #{$small}
+        width: 100%
+    // shop page
     .woocommerce-result-count, .orderby
         display: none
     ul.products 
@@ -14,6 +17,54 @@ div.woocommerce
             padding: 1rem 3rem 3rem
             margin: 0
             width: 33.3%
+            @media #{$xlarge}
+                padding: 2rem 1rem
+                width: 50%
+            @media #{$medium}
+                width: 100% !important
             .onsale 
+                background-color: $color2
                 top: .5rem
                 right: 3rem
+            img 
+                border-radius: 5px
+            h2 
+                color: $color3
+            .price 
+                del 
+                    span 
+                       color: $color1
+                ins 
+                    span 
+                        color: $color1
+            .add_to_cart_button
+                background-color: $color1
+                color: #fff
+            .add_to_cart_button:hover
+                background-color: #6b8e93
+                transition: .25s
+    // single product styles
+    div.single-product
+        div.product
+            .onsale
+                background-color: $color2
+            img 
+                border-radius: 5px
+            div.summary
+                .price
+                    del, ins 
+                        color: $color1 
+                p 
+                    text-indent: 0
+                .single_add_to_cart_button
+                    background-color: $color1
+                .single_add_to_cart_button:hover
+                    background-color: #6b8e93
+                    transition: .25s
+            div.woocommerce-tabs
+                h2 
+                    font-weight: 400
+        div.woocommerce-message
+            border-top-color: $color1
+        div.woocommerce-message:before
+            color: $color1

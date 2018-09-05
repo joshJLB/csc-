@@ -16,7 +16,7 @@
     <?php if (is_home()): ?>
       <h1 class="title">Blog</h1> 
     <?php elseif (is_single()): ?>
-        <h1 class="title"><a href="javascript:history.back();"><?php echo get_the_title(); ?></a></h1>
+        <h1 class="title"><?php echo get_the_title(); ?></h1>
       <!-- Anything else for single page child header here -->
     <?php elseif (is_shop()): ?>
       <h1 class="title"><a href="javascript:history.back();">Shop</a></h1>  

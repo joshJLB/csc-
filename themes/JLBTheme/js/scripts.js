@@ -87,6 +87,8 @@ $('body').addClass(detectBrowser());
 
 $('.certification-images').addClass(detectBrowser());
 
+$('.mobile-shop-sidebar').addClass(detectBrowser());
+
 $('.woocommerce-checkout-review-order').addClass(detectBrowser());
 // sliders
 $('.hero-slider').slick({

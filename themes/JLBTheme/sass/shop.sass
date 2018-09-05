@@ -6,18 +6,25 @@ div.woocommerce-message
 div.woocommerce-message:before
     color: $color1
 .woocommerce-page-container
-    margin: 3rem 0
+    margin: 3rem auto
+    width: 80%
     +fb(flex-start, flex-start)
     flex-wrap: wrap
+    @media #{$xxlarge}
+        width: 90%
+    @media #{$xlarge}
+        width: 100%
     div.woocommerce
         margin: 0 auto
-        width: 85%
+        width: 80%
         @media #{$small}
             width: 95%
         h1.page-title
             display: none
         .woocommerce-result-count
             padding-left: 5rem
+            @media #{$xlarge}
+                padding-left: 4rem
             @media #{$medium}
                 padding: 0
                 float: none
@@ -89,7 +96,7 @@ div.woocommerce-message:before
                     font-weight: 400
             .related 
                 margin-top: 3rem
-                .products
+                ul.products
                     li .onsale
                         right: 1.5rem
                         @media #{$xlarge}
@@ -99,7 +106,7 @@ div.woocommerce-message:before
         z-index: 998
         margin-bottom: 3rem
         padding-left: 2rem
-        width: 15%
+        width: 20%
         @media #{$xlarge}
             display: none
             margin-bottom: 0
@@ -115,10 +122,13 @@ div.woocommerce-message:before
                 padding-right: 2rem
             @media #{$large}
                 padding: 1rem
+            .widgettitle
+                font-size: 1rem
             input
-                padding: .5rem 0
+                padding: .5rem .5rem
                 margin-bottom: .75rem
                 width: 100%
+                font-size: .85rem
                 border: 1px solid $color1
             button 
                 padding: .25rem .5rem
@@ -126,6 +136,7 @@ div.woocommerce-message:before
                 border: none
                 border-radius: 3px
                 color: #fff 
+                font-size: .85rem
             button:hover 
                 background-color: #6b8e93
                 transition: .25s
@@ -139,6 +150,7 @@ div.woocommerce-message:before
                 .price_slider_amount
                     button 
                         padding: .5rem
+                        font-size: .85rem
                         font-weight: 400
             ul.product-categories
                 padding-left: 0
@@ -146,9 +158,12 @@ div.woocommerce-message:before
                     padding: 0 
                     margin-bottom: 0
                     border: none
+                    a 
+                        font-size: .85rem
         li.widget_rating_filter 
             ul li 
                 border: none
+        // Mobile sidebar
         // Mobile shop Button 
         .mobile-shop-button
             display: none
@@ -173,13 +188,15 @@ div.woocommerce-message:before
             transition: 0.5s
             .shop-sidebar-container
                 position: relative
-                padding-bottom: 2rem
+                padding-bottom: 0
                 height: 100%
                 width: 15rem
                 overflow: auto
                 li 
                     display: flex
                     flex-direction: column
+        .mobile-shop-sidebar.is-trident, .mobile-shop-sidebar.is-edge
+            z-index: 10
         .mobile-shop-sidebar.active
             transform: translateX(0)
             box-shadow: -2px 0 10px rgba(0,0,0,0.1)
@@ -373,7 +390,7 @@ div.woocommerce
             background-color: #6b8e93
             transition: .5s 
     // login page styles 
-    .woocommerce-form-login
+    .woocommerce-form-login, .woocommerce-form-register
         +fb(flex-start, flex-start)
         flex-wrap: wrap
         .woocommerce-form-row
@@ -388,6 +405,7 @@ div.woocommerce
         .button
             padding: 1rem
             margin-top: 1rem
+            margin-bottom: 1rem
             color: #fff 
             font-weight: 400
             background-color: $color1

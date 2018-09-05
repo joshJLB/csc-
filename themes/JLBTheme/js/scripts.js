@@ -123,4 +123,28 @@ $('.testimonial-paragraph').text(function(index, currentContent) {
   }
 });
 
+// mobile menu for shop page sidebar
+$('.mobile-shop-button').click(function() {
+  // change bar for animation
+  $('.shop-bar').removeClass('back');
+  if ($('.shop-bar').hasClass('change')) {
+    $('.shop-bar').addClass('back');
+  }
+  $('.shop-bar').toggleClass('change');
+
+  // toggle mobile menu
+  $('.mobile-shop-sidebar').toggleClass('active');
+  $('.shop-bar').toggleClass('active');
+  $('.header').find('.logo').toggleClass('active');
+
+  // html overflow
+  $('html').toggleClass('mobileScroll');
+
+  if ( $(window).scrollTop() > 50 && $('.woo-sidebar').hasClass('active') ) {
+    $('.woo-sidebar').removeClass('active');
+  } else if ($(window).scrollTop() > 50 && !$('.woo-sidebar').hasClass('active')){
+    $('.woo-sidebar').addClass('active');
+  }
+});
+
 });//close all jquery
